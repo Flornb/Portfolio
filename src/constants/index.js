@@ -1,6 +1,6 @@
 import {
     backend,
-    // frontend,
+    frontend,
     web,
     javascript,
     html,
@@ -15,7 +15,7 @@ import {
     figma,
     // mui,
     threejs,
-  } from "../assets";
+  } from "../assets/index"
   
   export const navLinks = [
     {
@@ -37,14 +37,18 @@ import {
       title: "Web Developer",
       icon: web,
     },
-    // {
-    //   title: "Frontend Developer",
-    //   icon: frontend,
-    // },
+    {
+      title: "Frontend Developer",
+      icon: frontend,
+    },
     {
       title: "Backend Developer",
       icon: backend,
     },
+    // {
+    //   title: "Backend Developer",
+    //   icon: backend,
+    // },
   ];
   
   const technologies = [

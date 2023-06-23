@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[#4f5d75]`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link 
@@ -31,9 +31,9 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title
-                ? 'text-white'
-                :'text-secondary'
-              } hover:text-white text-[18px] font-poppins font-medium cursor-pointer`}
+                ? 'text-[#E2AFFF]'
+                :'text-white'
+              } hover:text-secondary text-[18px] font-poppins font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
@@ -47,15 +47,15 @@ const Navbar = () => {
             className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`} >
+          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`} >
           <ul className='list-none flex justify-end items-start flex-col gap-4'>
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title
-                ? 'text-white'
-                :'text-secondary'
+                ?'text-secondary'
+                :'text-white'
               } font-poppins font-medium cursor-pointer text-[16px]`}
               onClick={() => {
                 setToggle(!toggle);
